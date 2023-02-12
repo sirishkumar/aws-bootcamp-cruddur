@@ -1,3 +1,15 @@
+image: gitpod/workspace-full
+tasks:
+  - name: Install AWS CLI
+    env:
+      AWS_CLI_AUTO_PROMPT: on-partial
+    command: |
+      curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      unzip awscliv2.zip
+      sudo ./aws/install
+      rm awscliv2.zip
+      rm -rf awscliv2
+      cd $THEIA_WORKSPACE_ROOT
 
 vscode:
   extensions:
