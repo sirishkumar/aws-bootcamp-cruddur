@@ -8,6 +8,7 @@ Here I have documented the tasks i have done in week 0 of the course.
     - [Budgets](#budgets)
     - [Security](#security)
     - [Architechture diagram](#architechture-diagram)
+    - [Service limits](#service-limits)
   - [Notes](#notes)
     - [Configure AWS CLI](#configure-aws-cli)
     - [Persist AWS CLI configuration variables in gitpod using following instructions](#persist-aws-cli-configuration-variables-in-gitpod-using-following-instructions)
@@ -37,12 +38,23 @@ Here I have documented the tasks i have done in week 0 of the course.
 
 ### Architechture diagram
 
+- [x] Went through AWS Well-Architected Framework
 - [x] Created a diagram for the architecture as shown below
 
 ![Cruddur Architecture](./static/cruddur-architecture.png)
 
 
 [Link](https://lucid.app/documents/view/6378ecba-2ceb-42df-bd2d-9aa402984714) to diagram in Lucid chart
+
+
+### Service limits
+
+- In AWS, service limits refer to the maximum amount of resources that you can use within a particular AWS service. 
+- These limits can be seen in the AWS console under the service limits section.
+- Lifting service limit may have impact on the billing in case of mistakes. So, I have not lifted any service limit.
+
+
+
 
 
 ## Notes
