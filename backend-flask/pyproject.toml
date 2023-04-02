@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "aws_bootcamp_cruddur"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 fastapi = "^0.92.0"
 uvicorn = "^0.20.0"
 

@@ -19,6 +19,8 @@ services:
       context: ./backend-flask
       dockerfile: Dockerfile
     container_name: cruddr-backend
+    volumes:
+      - ./backend-flask:/backend
     ports:
       - "4567:4567"
     environment:

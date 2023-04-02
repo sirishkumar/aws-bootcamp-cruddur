@@ -12,6 +12,7 @@ from services.create_reply import CreateReply
 from services.search_activities import SearchActivities
 from services.message_groups import MessageGroups
 from services.messages import Messages
+from services.notifications_activities import NotificationsActivities
 from services.create_message import CreateMessage
 from services.show_activity import ShowActivities
 
@@ -69,6 +70,12 @@ def data_create_message(user_receiver_handle: str, message: str):
 @router.get("/activities/home")
 def data_home():
     data = HomeActivities.run()
+    return JSONResponse(content=data, status_code=200)
+
+
+@router.get("/activities/notifications/home")
+def data_notifications():
+    data = NotificationsActivities.run()
     return JSONResponse(content=data, status_code=200)
 
 
