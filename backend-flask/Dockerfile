@@ -8,7 +8,7 @@ RUN pip install poetry && poetry config virtualenvs.create false && poetry insta
 
 COPY . .
 
-ENV PORT=8000
+ENV PORT=4567
 ENV FRONTEND_URL='*'
 ENV BACKEND_URL='*'
 EXPOSE $PORT

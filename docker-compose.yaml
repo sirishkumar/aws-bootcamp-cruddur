@@ -3,27 +3,28 @@ version: '3.9'
 services:
   frontend:
     build:
-      context: ./frontend
+      context: ./frontend-react-js
       dockerfile: Dockerfile
     container_name: cruddr-frontend
     ports:
       - "3000:3000"
     environment:
-      - PORT=3000
+      PORT: 3000
+      REACT_APP_BACKEND_URL: "https://${CODESPACE_NAME}-4567.preview.app.github.dev"
     networks:
       - app-network
 
   backend:
     build:
-      context: ./backend
+      context: ./backend-flask
       dockerfile: Dockerfile
     container_name: cruddr-backend
     ports:
-      - "8000:8000"
+      - "4567:4567"
     environment:
-      - PORT=8000
-      - FRONTEND_URL=*
-      - BACKEND_URL=*
+      PORT: 4567
+      FRONTEND_URL: "https://${CODESPACE_NAME}-3000.preview.app.github.dev"
+      BACKEND_URL: "https://${CODESPACE_NAME}-4567.preview.app.github.dev"
     networks:
       - app-network
 
